@@ -142,6 +142,7 @@
     <ClInclude Include="Core\GarbageCollection\GarbageCollector.h" />
     <ClInclude Include="Core\Object\GameObject.h" />
     <ClInclude Include="Core\SmartPointer\CSharePtr.h" />
+    <ClInclude Include="Core\FunctionTimer.h" />
     <ClInclude Include="SceneObject.h" />
     <ClInclude Include="UnitTest\TestCaseBase.h" />
     <ClInclude Include="UnitTest\UnitTester.h" />

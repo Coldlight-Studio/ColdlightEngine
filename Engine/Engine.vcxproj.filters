@@ -56,5 +56,8 @@
     <ClInclude Include="UnitTest\UnitTestProxy.h">
       <Filter>Header</Filter>
     </ClInclude>
+    <ClInclude Include="Core\FunctionTimer.h">
+      <Filter>Header</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>
