@@ -59,5 +59,8 @@
     <ClInclude Include="Core\FunctionTimer.h">
       <Filter>Header</Filter>
     </ClInclude>
+    <ClInclude Include="Core\SmartPointer\UniquePtr.h">
+      <Filter>Header</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>
