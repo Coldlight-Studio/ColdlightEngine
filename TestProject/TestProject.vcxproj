@@ -43,6 +43,14 @@
     <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
   </ImportGroup>
   <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <OutDir>$(SolutionDir)bin\$(Configuration)-$(Platform)\$(ProjectName)\</OutDir>
+    <IntDir>$(SolutionDir)intermediate\$(Configuration)-$(Platform)\$(ProjectName)\</IntDir>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <OutDir>$(SolutionDir)bin\$(Configuration)-$(Platform)\$(ProjectName)\</OutDir>
+    <IntDir>$(SolutionDir)intermediate\$(Configuration)-$(Platform)\$(ProjectName)\</IntDir>
+  </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
     <ClCompile>
       <WarningLevel>Level3</WarningLevel>
@@ -55,6 +63,9 @@
       <SubSystem>Console</SubSystem>
       <GenerateDebugInformation>true</GenerateDebugInformation>
     </Link>
+    <PostBuildEvent>
+      <Command>xcopy /y  "$(SolutionDir)bin\$(Configuration)-$(Platform)\Engine\Engine.dll" "$(SolutionDir)bin\$(Configuration)-$(Platform)\$(ProjectName)\"</Command>
+    </PostBuildEvent>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
     <ClCompile>
@@ -72,9 +83,12 @@
       <OptimizeReferences>true</OptimizeReferences>
       <GenerateDebugInformation>true</GenerateDebugInformation>
     </Link>
+    <PostBuildEvent>
+      <Command>xcopy /y  "$(SolutionDir)bin\$(Configuration)-$(Platform)\Engine\Engine.dll" "$(SolutionDir)bin\$(Configuration)-$(Platform)\$(ProjectName)\"</Command>
+    </PostBuildEvent>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="main.cpp" />
+    <ClCompile Include="Application.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="UnitTest\TestCase1.h" />

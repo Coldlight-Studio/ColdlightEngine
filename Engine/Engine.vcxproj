@@ -20,13 +20,13 @@
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
-    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
     <UseDebugLibraries>true</UseDebugLibraries>
     <PlatformToolset>v143</PlatformToolset>
     <CharacterSet>Unicode</CharacterSet>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
-    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
     <UseDebugLibraries>false</UseDebugLibraries>
     <PlatformToolset>v143</PlatformToolset>
     <WholeProgramOptimization>true</WholeProgramOptimization>
@@ -44,6 +44,14 @@
     <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
   </ImportGroup>
   <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <OutDir>$(SolutionDir)bin\$(Configuration)-$(Platform)\$(ProjectName)\</OutDir>
+    <IntDir>$(SolutionDir)intermediate\$(Configuration)-$(Platform)\$(ProjectName)\</IntDir>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <OutDir>$(SolutionDir)bin\$(Configuration)-$(Platform)\$(ProjectName)\</OutDir>
+    <IntDir>$(SolutionDir)intermediate\$(Configuration)-$(Platform)\$(ProjectName)\</IntDir>
+  </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
     <ClCompile>
       <WarningLevel>Level4</WarningLevel>
@@ -79,6 +87,7 @@
     <ClCompile Include="Core\Object\GameObject.cpp" />
     <ClCompile Include="Engine.cpp" />
     <ClCompile Include="SceneObject.cpp" />
+    <ClCompile Include="Test.cpp" />
     <ClCompile Include="UnitTest\UnitTester.cpp" />
     <ClCompile Include="UnitTest\UnitTestProxy.cpp" />
   </ItemGroup>
@@ -90,6 +99,7 @@
     <ClInclude Include="Core\FunctionTimer.h" />
     <ClInclude Include="Core\SmartPointer\UniquePtr.h" />
     <ClInclude Include="SceneObject.h" />
+    <ClInclude Include="Test.h" />
     <ClInclude Include="UnitTest\TestCaseBase.h" />
     <ClInclude Include="UnitTest\UnitTester.h" />
     <ClInclude Include="UnitTest\UnitTestProxy.h" />

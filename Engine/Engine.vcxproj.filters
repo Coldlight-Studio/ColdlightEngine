@@ -30,6 +30,9 @@
     <ClCompile Include="UnitTest\UnitTestProxy.cpp">
       <Filter>Source</Filter>
     </ClCompile>
+    <ClCompile Include="Test.cpp">
+      <Filter>Source</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="SceneObject.h">
@@ -60,6 +63,9 @@
       <Filter>Header</Filter>
     </ClInclude>
     <ClInclude Include="Core\SmartPointer\UniquePtr.h">
+      <Filter>Header</Filter>
+    </ClInclude>
+    <ClInclude Include="Test.h">
       <Filter>Header</Filter>
     </ClInclude>
   </ItemGroup>

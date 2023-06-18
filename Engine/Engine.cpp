@@ -26,11 +26,11 @@ void EngineLoop()
 	}
 }
 
-int main()
-{
-	FE_LOG("FrozenEngine v0.1");
-	GameObject obj1;
-	std::cout << obj1.GetName();
-	EngineLoop();
-	return 0;
-}
+//int main()
+//{
+//	FE_LOG("FrozenEngine v0.1");
+//	GameObject obj1;
+//	std::cout << obj1.GetName();
+//	EngineLoop();
+//	return 0;
+//}
