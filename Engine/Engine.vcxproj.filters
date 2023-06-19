@@ -32,9 +32,6 @@
     <ClInclude Include="Source\Core\Object\GameObject.h">
       <Filter>Header</Filter>
     </ClInclude>
-    <ClInclude Include="Source\Core\SmartPointer\CSharePtr.h">
-      <Filter>Header</Filter>
-    </ClInclude>
     <ClInclude Include="Source\Core\CoreMinimal.h">
       <Filter>Header</Filter>
     </ClInclude>
@@ -60,6 +57,9 @@
       <Filter>Header</Filter>
     </ClInclude>
     <ClInclude Include="Source\Engine.h">
+      <Filter>Header</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\Core\SmartPointer\CSharedPtr.h">
       <Filter>Header</Filter>
     </ClInclude>
   </ItemGroup>

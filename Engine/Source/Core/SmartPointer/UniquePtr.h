@@ -5,7 +5,7 @@
 namespace Coldlight
 {
 	template <typename T>
-	class CUniquePtr 
+	class CUniquePtr final
 	{
 	public:
 		// Default Constructor
@@ -21,7 +21,7 @@ namespace Coldlight
 			inPtr.m_Data = nullptr;
 		}
 
-		// Copy Assignment
+		// Move Constructor
 		CUniquePtr& operator=(CUniquePtr& inPtr)
 		{
 			if (this == &inPtr)

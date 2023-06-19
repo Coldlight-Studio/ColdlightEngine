@@ -94,8 +94,8 @@
     <ClInclude Include="Source\Core\CoreMinimal.h" />
     <ClInclude Include="Source\Core\GarbageCollection\GarbageCollector.h" />
     <ClInclude Include="Source\Core\Object\GameObject.h" />
-    <ClInclude Include="Source\Core\SmartPointer\CSharePtr.h" />
     <ClInclude Include="Source\Core\FunctionTimer.h" />
+    <ClInclude Include="Source\Core\SmartPointer\CSharedPtr.h" />
     <ClInclude Include="Source\Core\SmartPointer\UniquePtr.h" />
     <ClInclude Include="Source\Engine.h" />
     <ClInclude Include="Source\UnitTest\TestCaseBase.h" />
