@@ -15,57 +15,51 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="Engine.cpp">
+    <ClCompile Include="Source\Core\Object\GameObject.cpp">
       <Filter>Source</Filter>
     </ClCompile>
-    <ClCompile Include="SceneObject.cpp">
+    <ClCompile Include="Source\UnitTest\UnitTester.cpp">
       <Filter>Source</Filter>
     </ClCompile>
-    <ClCompile Include="Core\Object\GameObject.cpp">
+    <ClCompile Include="Source\UnitTest\UnitTestProxy.cpp">
       <Filter>Source</Filter>
     </ClCompile>
-    <ClCompile Include="UnitTest\UnitTester.cpp">
-      <Filter>Source</Filter>
-    </ClCompile>
-    <ClCompile Include="UnitTest\UnitTestProxy.cpp">
-      <Filter>Source</Filter>
-    </ClCompile>
-    <ClCompile Include="Test.cpp">
+    <ClCompile Include="Source\Core\Application.cpp">
       <Filter>Source</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="SceneObject.h">
+    <ClInclude Include="Source\Core\Object\GameObject.h">
       <Filter>Header</Filter>
     </ClInclude>
-    <ClInclude Include="Core\Object\GameObject.h">
+    <ClInclude Include="Source\Core\SmartPointer\CSharePtr.h">
       <Filter>Header</Filter>
     </ClInclude>
-    <ClInclude Include="Core\SmartPointer\CSharePtr.h">
+    <ClInclude Include="Source\Core\CoreMinimal.h">
       <Filter>Header</Filter>
     </ClInclude>
-    <ClInclude Include="Core\CoreMinimal.h">
+    <ClInclude Include="Source\Core\GarbageCollection\GarbageCollector.h">
       <Filter>Header</Filter>
     </ClInclude>
-    <ClInclude Include="Core\GarbageCollection\GarbageCollector.h">
+    <ClInclude Include="Source\UnitTest\TestCaseBase.h">
       <Filter>Header</Filter>
     </ClInclude>
-    <ClInclude Include="UnitTest\TestCaseBase.h">
+    <ClInclude Include="Source\UnitTest\UnitTester.h">
       <Filter>Header</Filter>
     </ClInclude>
-    <ClInclude Include="UnitTest\UnitTester.h">
+    <ClInclude Include="Source\UnitTest\UnitTestProxy.h">
       <Filter>Header</Filter>
     </ClInclude>
-    <ClInclude Include="UnitTest\UnitTestProxy.h">
+    <ClInclude Include="Source\Core\FunctionTimer.h">
       <Filter>Header</Filter>
     </ClInclude>
-    <ClInclude Include="Core\FunctionTimer.h">
+    <ClInclude Include="Source\Core\SmartPointer\UniquePtr.h">
       <Filter>Header</Filter>
     </ClInclude>
-    <ClInclude Include="Core\SmartPointer\UniquePtr.h">
+    <ClInclude Include="Source\Core\Application.h">
       <Filter>Header</Filter>
     </ClInclude>
-    <ClInclude Include="Test.h">
+    <ClInclude Include="Source\Engine.h">
       <Filter>Header</Filter>
     </ClInclude>
   </ItemGroup>

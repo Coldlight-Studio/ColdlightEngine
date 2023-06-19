@@ -56,7 +56,7 @@
     <ClCompile>
       <WarningLevel>Level4</WarningLevel>
       <SDLCheck>true</SDLCheck>
-      <PreprocessorDefinitions>_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>CL_PLATFORM_WINDOWS;CL_CORE_API_EXPORTS;_WINDLL;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
       <PreprocessToFile>false</PreprocessToFile>
       <AdditionalOptions>
@@ -73,7 +73,7 @@
       <FunctionLevelLinking>true</FunctionLevelLinking>
       <IntrinsicFunctions>true</IntrinsicFunctions>
       <SDLCheck>true</SDLCheck>
-      <PreprocessorDefinitions>NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>CL_PLATFORM_WINDOWS;_WINDLL;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
     </ClCompile>
     <Link>
@@ -84,25 +84,23 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="Core\Object\GameObject.cpp" />
-    <ClCompile Include="Engine.cpp" />
-    <ClCompile Include="SceneObject.cpp" />
-    <ClCompile Include="Test.cpp" />
-    <ClCompile Include="UnitTest\UnitTester.cpp" />
-    <ClCompile Include="UnitTest\UnitTestProxy.cpp" />
+    <ClCompile Include="Source\Core\Application.cpp" />
+    <ClCompile Include="Source\Core\Object\GameObject.cpp" />
+    <ClCompile Include="Source\UnitTest\UnitTester.cpp" />
+    <ClCompile Include="Source\UnitTest\UnitTestProxy.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="Core\CoreMinimal.h" />
-    <ClInclude Include="Core\GarbageCollection\GarbageCollector.h" />
-    <ClInclude Include="Core\Object\GameObject.h" />
-    <ClInclude Include="Core\SmartPointer\CSharePtr.h" />
-    <ClInclude Include="Core\FunctionTimer.h" />
-    <ClInclude Include="Core\SmartPointer\UniquePtr.h" />
-    <ClInclude Include="SceneObject.h" />
-    <ClInclude Include="Test.h" />
-    <ClInclude Include="UnitTest\TestCaseBase.h" />
-    <ClInclude Include="UnitTest\UnitTester.h" />
-    <ClInclude Include="UnitTest\UnitTestProxy.h" />
+    <ClInclude Include="Source\Core\Application.h" />
+    <ClInclude Include="Source\Core\CoreMinimal.h" />
+    <ClInclude Include="Source\Core\GarbageCollection\GarbageCollector.h" />
+    <ClInclude Include="Source\Core\Object\GameObject.h" />
+    <ClInclude Include="Source\Core\SmartPointer\CSharePtr.h" />
+    <ClInclude Include="Source\Core\FunctionTimer.h" />
+    <ClInclude Include="Source\Core\SmartPointer\UniquePtr.h" />
+    <ClInclude Include="Source\Engine.h" />
+    <ClInclude Include="Source\UnitTest\TestCaseBase.h" />
+    <ClInclude Include="Source\UnitTest\UnitTester.h" />
+    <ClInclude Include="Source\UnitTest\UnitTestProxy.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

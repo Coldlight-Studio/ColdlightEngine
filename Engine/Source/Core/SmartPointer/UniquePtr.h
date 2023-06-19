@@ -1,5 +1,7 @@
 #pragma once
 
+#include <cstdio>
+
 namespace Coldlight
 {
 	template <typename T>
@@ -10,6 +12,7 @@ namespace Coldlight
 		CUniquePtr()
 		{
 			m_Data = new T();
+			printf("CUniquePtr()\n");
 		}
 
 		CUniquePtr(CUniquePtr& inPtr)
