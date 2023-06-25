@@ -92,6 +92,7 @@
   <ItemGroup>
     <ClInclude Include="Source\Core\Application.h" />
     <ClInclude Include="Source\Core\CoreMinimal.h" />
+    <ClInclude Include="Source\Core\EntryPoint.h" />
     <ClInclude Include="Source\Core\GarbageCollection\GarbageCollector.h" />
     <ClInclude Include="Source\Core\Object\GameObject.h" />
     <ClInclude Include="Source\Core\FunctionTimer.h" />

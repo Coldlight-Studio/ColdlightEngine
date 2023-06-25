@@ -15,10 +15,7 @@ public:
 	}
 };
 
-int main()
+Coldlight::Application* Coldlight::CreateApplication()
 {
-	TestProject* project = new TestProject();
-	project->Run();
-	delete project;
-	return 0;
+	return new TestProject();
 }

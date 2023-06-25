@@ -13,4 +13,6 @@ namespace Coldlight
 		void Run();
 	};
 
+	Application* CreateApplication();
+
 }
