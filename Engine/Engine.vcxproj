@@ -61,6 +61,7 @@
       <PreprocessToFile>false</PreprocessToFile>
       <AdditionalOptions>
       </AdditionalOptions>
+      <AdditionalIncludeDirectories>$(SolutionDir)Engine\Vendor\spdlog\include</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
@@ -75,6 +76,7 @@
       <SDLCheck>true</SDLCheck>
       <PreprocessorDefinitions>CL_PLATFORM_WINDOWS;_WINDLL;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
+      <AdditionalIncludeDirectories>$(SolutionDir)Engine\Vendor\spdlog\include</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
@@ -84,12 +86,14 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="Source\Core\LogSystem\Log.cpp" />
     <ClCompile Include="Source\Core\Application.cpp" />
     <ClCompile Include="Source\Core\Object\GameObject.cpp" />
     <ClCompile Include="Source\UnitTest\UnitTester.cpp" />
     <ClCompile Include="Source\UnitTest\UnitTestProxy.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="Source\Core\LogSystem\Log.h" />
     <ClInclude Include="Source\Core\Application.h" />
     <ClInclude Include="Source\Core\CoreMinimal.h" />
     <ClInclude Include="Source\Core\EntryPoint.h" />

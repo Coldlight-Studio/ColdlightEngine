@@ -1,4 +1,6 @@
 #include <iostream>
+
+#include "Core/Application.h"
 #include "Engine.h"
 
 class TestProject : public Coldlight::Application
