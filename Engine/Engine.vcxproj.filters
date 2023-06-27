@@ -62,7 +62,7 @@
     <ClInclude Include="Source\Engine.h">
       <Filter>Header</Filter>
     </ClInclude>
-    <ClInclude Include="Source\Core\SmartPointer\CSharedPtr.h">
+    <ClInclude Include="Source\Core\SmartPointer\SharedPtr.h">
       <Filter>Header</Filter>
     </ClInclude>
     <ClInclude Include="Source\Core\EntryPoint.h">

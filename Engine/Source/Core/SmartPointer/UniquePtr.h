@@ -13,10 +13,14 @@ namespace Coldlight
 		{
 			m_Data = new T();
 			printf("CUniquePtr()\n");
+
+			printf("%p\n", this);
+			printf("%p\n", this + 1);
 		}
 
 		CUniquePtr(CUniquePtr& inPtr)
 		{
+
 			m_Data = inPtr.m_Data;
 			inPtr.m_Data = nullptr;
 		}
@@ -46,5 +50,6 @@ namespace Coldlight
 
 	private:
 		T* m_Data = nullptr;
+		char a[2];
 	};
 }
