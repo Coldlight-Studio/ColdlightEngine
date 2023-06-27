@@ -1,4 +1,5 @@
 #include "Application.h"
+#include "SmartPointer/CSharedPtr.h"
 #include <cstdio>
 
 namespace Coldlight
@@ -13,6 +14,7 @@ namespace Coldlight
 
 	void Application::Run()
 	{
+		CSharedPtr<GameObject> sharedPtr = CSharedPtr<GameObject>();
 		while (true);
 	}
 }
