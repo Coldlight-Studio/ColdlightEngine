@@ -64,7 +64,8 @@
       <GenerateDebugInformation>true</GenerateDebugInformation>
     </Link>
     <PostBuildEvent>
-      <Command>xcopy /y  "$(SolutionDir)bin\$(Configuration)-$(Platform)\Engine\Engine.dll" "$(SolutionDir)bin\$(Configuration)-$(Platform)\$(ProjectName)\"</Command>
+      <Command>
+      </Command>
     </PostBuildEvent>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
@@ -84,7 +85,8 @@
       <GenerateDebugInformation>true</GenerateDebugInformation>
     </Link>
     <PostBuildEvent>
-      <Command>xcopy /y  "$(SolutionDir)bin\$(Configuration)-$(Platform)\Engine\Engine.dll" "$(SolutionDir)bin\$(Configuration)-$(Platform)\$(ProjectName)\"</Command>
+      <Command>
+      </Command>
     </PostBuildEvent>
   </ItemDefinitionGroup>
   <ItemGroup>
