@@ -5,20 +5,20 @@
 namespace Coldlight
 {
 	template <typename T>
-	class CUniquePtr final
+	class UniquePtr final
 	{
 	public:
 		// Default Constructor
-		CUniquePtr()
+		UniquePtr()
 		{
 			m_Data = new T();
-			printf("CUniquePtr()\n");
+			printf("UniquePtr()\n");
 
 			printf("%p\n", this);
 			printf("%p\n", this + 1);
 		}
 
-		CUniquePtr(CUniquePtr& inPtr)
+		UniquePtr(UniquePtr& inPtr)
 		{
 
 			m_Data = inPtr.m_Data;
@@ -26,7 +26,7 @@ namespace Coldlight
 		}
 
 		// Move Constructor
-		CUniquePtr& operator=(CUniquePtr& inPtr)
+		UniquePtr& operator=(UniquePtr& inPtr)
 		{
 			if (this == &inPtr)
 			{
@@ -38,7 +38,7 @@ namespace Coldlight
 			return *this;
 		}
 
-		~CUniquePtr() 
+		~UniquePtr() 
 		{
 			delete m_Data;
 		}
