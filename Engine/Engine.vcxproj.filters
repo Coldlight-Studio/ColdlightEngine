@@ -30,6 +30,9 @@
     <ClCompile Include="Source\Core\LogSystem\Log.cpp">
       <Filter>Source</Filter>
     </ClCompile>
+    <ClCompile Include="Source\AutomaticTest\AutomaticTestFramework.cpp">
+      <Filter>Source</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Source\Core\Object\GameObject.h">
@@ -69,6 +72,12 @@
       <Filter>Header</Filter>
     </ClInclude>
     <ClInclude Include="Source\Core\LogSystem\Log.h">
+      <Filter>Header</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\AutomaticTest\UnitTest.h">
+      <Filter>Header</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\AutomaticTest\AutomaticTestFramework.h">
       <Filter>Header</Filter>
     </ClInclude>
   </ItemGroup>
