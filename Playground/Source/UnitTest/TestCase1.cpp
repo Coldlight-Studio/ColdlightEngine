@@ -18,5 +18,4 @@ public:
 	}
 };
 
-
 REGISTER_TEST_CASE(TestCase1)
