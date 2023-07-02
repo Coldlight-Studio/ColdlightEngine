@@ -401,3 +401,8 @@ FodyWeavers.xsd
 # Custom
 bin/
 intermediate/
+
+# Visual Studio
+*.sln
+*.vcxproj
+*.vcxproj.filters
