@@ -1,7 +1,6 @@
 #pragma once
 
 #include "Core/CoreMinimal.h"
-#include <string>
 #include "AutomaticTestFramework.h"
 
 namespace Coldlight

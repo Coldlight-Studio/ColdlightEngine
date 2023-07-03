@@ -1,5 +1,5 @@
+#include "clpch.h"
 #include "Application.h"
-
 #include "Events/ApplicationEvent.h"
 #include "Core/LogSystem/Log.h"
 

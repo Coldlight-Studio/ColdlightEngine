@@ -18,6 +18,9 @@ project "Engine"
 	targetdir ("bin/" .. outputdir .. "/%{prj.name}")
 	objdir ("intermediate/" .. outputdir .. "/%{prj.name}")
 
+	pchheader "clpch.h"
+	pchsource "Engine/Source/clpch.cpp"
+
 	files
 	{
 		"%{prj.name}/Source/**.h",

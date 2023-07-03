@@ -1,3 +1,4 @@
+#include "clpch.h"
 #include "AutomaticTestFramework.h"
 #include "UnitTest.h"
 #include "Core/LogSystem/Log.h"

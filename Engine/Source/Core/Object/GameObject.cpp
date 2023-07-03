@@ -1,3 +1,4 @@
+#include "clpch.h"
 #include "GameObject.h"
 
 namespace Coldlight
