@@ -2,6 +2,7 @@
 
 #include "Core/CoreMinimal.h"
 #include "spdlog/spdlog.h"
+#include "spdlog/fmt/ostr.h"
 
 namespace Coldlight
 {
