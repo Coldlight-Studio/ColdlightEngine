@@ -1,6 +1,6 @@
 #pragma once
 
-#include "../Core/CoreMinimal.h"
+#include "Core/CoreMinimal.h"
 #include <string>
 #include <map>
 

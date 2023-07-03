@@ -1,7 +1,7 @@
 #pragma once
 
 #include <string>
-#include "../CoreMinimal.h"
+#include "Core/CoreMinimal.h"
 
 namespace Coldlight
 {

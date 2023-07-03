@@ -1,6 +1,6 @@
 #pragma once
 
-#include "../CoreMinimal.h"
+#include "Core/CoreMinimal.h"
 #include "spdlog/spdlog.h"
 
 namespace Coldlight

@@ -1,6 +1,6 @@
 #include "AutomaticTestFramework.h"
 #include "UnitTest.h"
-#include "../Core/LogSystem/Log.h"
+#include "Core/LogSystem/Log.h"
 
 namespace Coldlight
 {
