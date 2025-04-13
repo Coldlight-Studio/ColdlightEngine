@@ -1,7 +1,7 @@
 #include "clpch.h"
 #include "Application.h"
 #include "Events/ApplicationEvent.h"
-#include "Core/LogSystem/Log.h"
+#include <iostream>
 
 namespace Coldlight
 {
@@ -16,7 +16,7 @@ namespace Coldlight
 	void Application::Run()
 	{
 		WindowResizeEvent e(1280, 720);
-		CL_CORE_TRACE(e);
+		std::cout << e << std::endl;
 
 		while (true);
 	}

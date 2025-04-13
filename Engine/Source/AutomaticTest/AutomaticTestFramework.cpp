@@ -1,7 +1,8 @@
 #include "clpch.h"
 #include "AutomaticTestFramework.h"
 #include "UnitTest.h"
-#include "Core/LogSystem/Log.h"
+#include <iostream>
+#include <format>
 
 namespace Coldlight
 {
@@ -21,11 +22,11 @@ namespace Coldlight
 			bool result = item.second->RunTest();
 			if (result)
 			{
-				CL_CORE_INFO("{0} Passed.", item.second->GetName());
+				std::cout << std::format("{0} Passed.", item.second->GetName()) << std::endl;
 			}
 			else
 			{
-				CL_CORE_ERROR("{0} Failed.", item.second->GetName());
+				std::cerr << ("{0} Failed.", item.second->GetName()) << std::endl;
 			}
 		}
 	}

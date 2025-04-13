@@ -3,13 +3,14 @@
 #ifdef CL_PLATFORM_WINDOWS
 
 #include "Application.h"
+#include <iostream>
+#include <format>
 
 Coldlight::Application* Coldlight::CreateApplication();
 
 int main(int argc, char** argv)
 {
-	Coldlight::Log::Init();
-	CL_CORE_INFO("Coldlight Engine, version = {0}", "v0.0.1");
+	std::cout << std::format("Coldlight Engine, version = {0}", "v0.0.1") << std::endl;
 
 	Coldlight::AutomaticTestFramework::Get().RunAllTests();
 
