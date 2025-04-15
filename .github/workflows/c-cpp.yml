@@ -11,43 +11,22 @@ jobs:
     strategy:
       matrix:
         os: [ubuntu-latest, macos-latest, windows-latest]
-
     runs-on: ${{ matrix.os }}
-
     steps:
     - uses: actions/checkout@v4
 
-    - name: Setup Windows Tools
-      if: matrix.os == 'windows-latest'
-      run: choco install cmake -y
-
-    - name: Setup MSVC (Windows)
-      if: matrix.os == 'windows-latest'
-      uses: actions/setup-msvc@v1
-      with:
-        vs-version: '2022'
-
-    - name: Install Dependencies (macOS/Linux)
-      if: matrix.os != 'windows-latest'
-      run: |
-        if [[ "${{ matrix.os }}" == "macos-latest" ]]; then
-          brew install cmake  # macOS 用 Homebrew
-        else
-          sudo apt-get install -y cmake  # Ubuntu
-        fi
-
-    - name: Configure
+    - name: Install CMake
       run: |
         if [[ "${{ matrix.os }}" == "windows-latest" ]]; then
-          cmake -B build -S .
+          choco install cmake -y
+        elif [[ "${{ matrix.os }}" == "macos-latest" ]]; then
+          brew install cmake
         else
-          ./configure
+          sudo apt-get update && sudo apt-get install -y cmake
         fi
+        
+    - name: Configure with CMake
+      run: cmake -B build -S .
 
-    - name: Build
-      run: |
-        if [[ "${{ matrix.os }}" == "windows-latest" ]]; then
-          cmake --build build
-        else
-          make
-        fi
+    - name: Build with CMake
+      run: cmake --build build
