@@ -26,18 +26,12 @@ elseif(APPLE)
         CL_PLATFORM_APPLE
     )
     set_target_properties(Playground PROPERTIES
-        MACOSX_RPATH ON
         XCODE_ATTRIBUTE_CLANG_CXX_LANGUAGE_STANDARD "c++20"
         XCODE_ATTRIBUTE_CLANG_CXX_LIBRARY "libc++"
     )
 elseif(UNIX AND NOT APPLE)
     target_compile_definitions(Playground PRIVATE
         CL_PLATFORM_LINUX
-    )
-    set_target_properties(Playground PROPERTIES
-        POSITION_INDEPENDENT_CODE ON
-        CXX_VISIBILITY_PRESET "hidden"
-        VISIBILITY_INLINES_HIDDEN ON
     )
 endif()
 

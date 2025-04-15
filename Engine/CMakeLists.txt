@@ -27,25 +27,24 @@ if(WIN32)
         _WINDLL
     )
     set_target_properties(Engine PROPERTIES
-        WINDOWS_EXPORT_ALL_SYMBOLS ON
+        WINDOWS_EXPORT_ALL_SYMBOLS OFF
         MSVC_RUNTIME_LIBRARY "MultiThreaded$<$<CONFIG:Debug>:Debug>"
     )
 elseif(APPLE)
     target_compile_definitions(Engine PRIVATE
         CL_PLATFORM_APPLE
+        CL_CORE_API_EXPORTS
     )
     set_target_properties(Engine PROPERTIES
         MACOSX_RPATH ON
-        XCODE_ATTRIBUTE_CLANG_CXX_LANGUAGE_STANDARD "c++20"
-        XCODE_ATTRIBUTE_CLANG_CXX_LIBRARY "libc++"
+        target_compile_options(Engine PRIVATE -fvisibility=hidden)
     )
 elseif(UNIX AND NOT APPLE)
     target_compile_definitions(Engine PRIVATE
         CL_PLATFORM_LINUX
+        CL_CORE_API_EXPORTS
     )
     set_target_properties(Engine PROPERTIES
-        POSITION_INDEPENDENT_CODE ON
-        CXX_VISIBILITY_PRESET "hidden"
-        VISIBILITY_INLINES_HIDDEN ON
+        target_compile_options(Engine PRIVATE -fvisibility=hidden)
     )
 endif()
