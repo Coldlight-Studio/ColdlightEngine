@@ -26,7 +26,7 @@ namespace Coldlight
 			}
 			else
 			{
-				std::cerr << ("{0} Failed.", item.second->GetName()) << std::endl;
+				std::cerr << std::format("{0} Failed.", item.second->GetName()) << std::endl;
 			}
 		}
 	}

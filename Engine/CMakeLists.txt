@@ -30,4 +30,22 @@ if(WIN32)
         WINDOWS_EXPORT_ALL_SYMBOLS ON
         MSVC_RUNTIME_LIBRARY "MultiThreaded$<$<CONFIG:Debug>:Debug>"
     )
+elseif(APPLE)
+    target_compile_definitions(Engine PRIVATE
+        CL_PLATFORM_APPLE
+    )
+    set_target_properties(Engine PROPERTIES
+        MACOSX_RPATH ON
+        XCODE_ATTRIBUTE_CLANG_CXX_LANGUAGE_STANDARD "c++20"
+        XCODE_ATTRIBUTE_CLANG_CXX_LIBRARY "libc++"
+    )
+elseif(UNIX AND NOT APPLE)
+    target_compile_definitions(Engine PRIVATE
+        CL_PLATFORM_LINUX
+    )
+    set_target_properties(Engine PROPERTIES
+        POSITION_INDEPENDENT_CODE ON
+        CXX_VISIBILITY_PRESET "hidden"
+        VISIBILITY_INLINES_HIDDEN ON
+    )
 endif()

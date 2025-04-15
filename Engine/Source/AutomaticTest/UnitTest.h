@@ -15,7 +15,7 @@ namespace Coldlight
 
 		virtual bool RunTest() = 0;
 
-		__forceinline const std::string GetName() const
+		inline const std::string GetName() const
 		{
 			return m_Name;
 		}

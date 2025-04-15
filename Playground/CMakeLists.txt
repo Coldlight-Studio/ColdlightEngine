@@ -21,13 +21,29 @@ if(WIN32)
     target_compile_definitions(Playground PRIVATE
         CL_PLATFORM_WINDOWS
     )
+elseif(APPLE)
+    target_compile_definitions(Playground PRIVATE
+        CL_PLATFORM_APPLE
+    )
+    set_target_properties(Playground PROPERTIES
+        MACOSX_RPATH ON
+        XCODE_ATTRIBUTE_CLANG_CXX_LANGUAGE_STANDARD "c++20"
+        XCODE_ATTRIBUTE_CLANG_CXX_LIBRARY "libc++"
+    )
+elseif(UNIX AND NOT APPLE)
+    target_compile_definitions(Playground PRIVATE
+        CL_PLATFORM_LINUX
+    )
+    set_target_properties(Playground PROPERTIES
+        POSITION_INDEPENDENT_CODE ON
+        CXX_VISIBILITY_PRESET "hidden"
+        VISIBILITY_INLINES_HIDDEN ON
+    )
 endif()
 
 add_custom_command(
     TARGET Playground POST_BUILD
     COMMAND ${CMAKE_COMMAND} -E copy_if_different
         "$<TARGET_FILE:Engine>"
-        "$<TARGET_FILE_DIR:Playground>/Engine.dll"
-    COMMENT "Copying Engine.dll to Playground output directory"
-    VERBATIM
+        "$<TARGET_FILE_DIR:Playground>/$<TARGET_FILE_NAME:Engine>"
 )

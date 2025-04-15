@@ -1,7 +1,5 @@
 #pragma once
 
-#ifdef CL_PLATFORM_WINDOWS
-
 #include "Application.h"
 #include <iostream>
 #include <format>
@@ -18,5 +16,3 @@ int main(int argc, char** argv)
 	app->Run();
 	delete app;
 }
-
-#endif
