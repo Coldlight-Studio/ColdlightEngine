@@ -406,3 +406,6 @@ intermediate/
 *.sln
 *.vcxproj
 *.vcxproj.filters
+
+# CMake build
+build/
