@@ -24,7 +24,7 @@ jobs:
         else
           sudo apt-get update && sudo apt-get install -y cmake
         fi
-        shell: bash
+      shell: bash
         
     - name: Configure with CMake
       run: cmake -B build -S .
