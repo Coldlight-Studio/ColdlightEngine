@@ -1,7 +1,0 @@
-[submodule "imgui"]
-	path = imgui
-	url = ../../ocornut/imgui.git
-	branch = docking
-[submodule "Engine/Vendor/spdlog"]
-	path = Engine/Vendor/spdlog
-	url = https://github.com/gabime/spdlog.git
